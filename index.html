@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>台新網路銀行登入</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .logo {
+            margin-bottom: 10px;
+            margin-right: 0px;
+
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        label {
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #d9534f;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img src="image/ima1.png" alt="台新銀行logo" style="width:400px;">
+    </div>
+    <form action="/TIBNetBank/svc/web/login/checkLogin" method="post">
+        <label for="identity">身分證字號:</label><br>
+        <input type="text" id="identity" name="identity"><br><br>
+        <label for="username">使用者代號:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">使用者密碼:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="登入">
+    </form>
+</div>
+</body>
+</html>
